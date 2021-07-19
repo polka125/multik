@@ -4,16 +4,16 @@
 
 package org.jetbrains.kotlinx.multik.jvm
 
-import org.jetbrains.kotlinx.multik.api.*
-import org.jetbrains.kotlinx.multik.ndarray.data.*
-import org.jetbrains.kotlinx.multik.ndarray.data.set
-import org.jetbrains.kotlinx.multik.ndarray.operations.map
-import org.jetbrains.kotlinx.multik.ndarray.operations.maxBy
-import org.jetbrains.kotlinx.multik.ndarray.operations.maxWith
-import java.lang.ArithmeticException
-import java.lang.UnsupportedOperationException
-import kotlin.math.abs
-import kotlin.math.min
+    import org.jetbrains.kotlinx.multik.api.*
+    import org.jetbrains.kotlinx.multik.ndarray.data.*
+    import org.jetbrains.kotlinx.multik.ndarray.data.set
+    import org.jetbrains.kotlinx.multik.ndarray.operations.map
+    import org.jetbrains.kotlinx.multik.ndarray.operations.maxBy
+    import org.jetbrains.kotlinx.multik.ndarray.operations.maxWith
+    import java.lang.ArithmeticException
+    import java.lang.UnsupportedOperationException
+    import kotlin.math.abs
+    import kotlin.math.min
 
 public object JvmLinAlg : LinAlg {
 

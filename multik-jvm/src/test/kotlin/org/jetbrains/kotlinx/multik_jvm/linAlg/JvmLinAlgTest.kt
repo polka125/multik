@@ -6,16 +6,17 @@ package org.jetbrains.kotlinx.multik_jvm.linAlg
 
 
 import org.jetbrains.kotlinx.multik.api.*
-import org.jetbrains.kotlinx.multik.jvm.JvmLinAlg
+import org.jetbrains.kotlinx.multik.jvm.*
 import org.jetbrains.kotlinx.multik.jvm.JvmLinAlg.dot
 import org.jetbrains.kotlinx.multik.jvm.JvmLinAlg.inv
 import org.jetbrains.kotlinx.multik.jvm.JvmLinAlg.solve
 import org.jetbrains.kotlinx.multik.jvm.JvmMath.max
 import org.jetbrains.kotlinx.multik.jvm.JvmMath.min
-import org.jetbrains.kotlinx.multik.jvm.PLU
 import org.jetbrains.kotlinx.multik.ndarray.data.*
 import org.jetbrains.kotlinx.multik.ndarray.operations.map
+import org.jetbrains.kotlinx.multik.ndarray.operations.maxBy
 import org.jetbrains.kotlinx.multik.ndarray.operations.minus
+import org.jetbrains.kotlinx.multik.ndarray.operations.sum
 import java.lang.Math.pow
 import kotlin.math.abs
 import kotlin.math.max
@@ -151,6 +152,22 @@ class JvmLinAlgTest {
 
         }
     }
+
+
+    @Test
+    fun whatever() {
+        val rnd = Random(System.currentTimeMillis())
+        val n = 4
+        val m = 2
+        val a = mk.d2array<Double>(n, m) { rnd.nextDouble() }
+        val (q, r) = qr(a)
+        println("a = \n$a")
+        println("q = \n$q")
+        println("r = \n$r")
+        println("q*q.T = \n${dot(q, q.transpose())}")
+        println((dot(q, r) - a).maxBy { abs(it) })
+    }
+
 
 
 }
