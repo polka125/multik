@@ -22,5 +22,5 @@ internal fun invComplexDouble(a: MultiArray<ComplexDouble, D2>): D2Array<Complex
 }
 
 internal fun invComplexFloat(a: MultiArray<ComplexDouble, D2>): D2Array<ComplexDouble> {
-    TODO("not yet implemented")
+    TODO("not implemented yet")
 }
